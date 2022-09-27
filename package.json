@@ -1,5 +1,5 @@
 {
-  "name": "project",
+  "name": "rbac-angular",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
