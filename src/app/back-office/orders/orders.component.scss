@@ -1,0 +1,39 @@
+:host {
+  padding: 0 var(--base-separation);
+  width: 100%;
+}
+
+h1 {
+  margin-bottom: var(--double-separation);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  thead th {
+    font-size: 0.8em;
+    text-align: left;
+    color: #36087b;
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: #ebebeb;
+  }
+  th,
+  td {
+    padding: var(--half-separation) var(--base-separation);
+    span {
+      padding: 4px var(--half-separation);
+      border-radius: 8px;
+      font-size: 0.8em;
+      background-color: #f0d7a2;
+
+      &.delivered {
+        background-color: #81e1ac;
+      }
+      &.cancelled {
+        background-color: #f59191;
+      }
+    }
+  }
+}

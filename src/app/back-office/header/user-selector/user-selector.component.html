@@ -1,0 +1,18 @@
+<div class="info">
+  <img class="account" src="/assets/icons/account.svg" aria-hidden="true" />
+  <p class="username">{{ currentUser?.username }}</p>
+  <p class="position">
+    <small>{{ currentUser?.role }}</small>
+  </p>
+  <img
+    class="chevron"
+    src="/assets/icons/down_chevron.svg"
+    aria-hidden="true"
+  />
+</div>
+
+<ul *ngIf="showList">
+  <li role="button" *ngFor="let user of users" (click)="changeUser(user)">
+    {{ user.username }} <small>{{ user.role }}</small>
+  </li>
+</ul>

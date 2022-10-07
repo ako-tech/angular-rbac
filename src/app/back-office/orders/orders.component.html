@@ -1,0 +1,32 @@
+<h1>Pedidos</h1>
+
+<ng-container *ngIf="orders$ | async as orders; else loading">
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Fecha</th>
+        <th>Cliente</th>
+        <th>Nº Productos</th>
+        <th>Precio Total</th>
+        <th>Estado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let order of orders">
+        <td>{{ order.id }}</td>
+        <td>{{ order.orderDate | date: "dd-MMM-y" }}</td>
+        <td>{{ order.clientName }}</td>
+        <td>{{ order.itemsCount }}</td>
+        <td>{{ order.total | currency: "€" }}</td>
+        <td>
+          <span class="{{ order.status | lowercase }}">{{
+            order.status | translateOrderStatus
+          }}</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</ng-container>
+
+<ng-template #loading>Obteniendo Pedidos...</ng-template>

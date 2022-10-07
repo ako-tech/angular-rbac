@@ -1,0 +1,18 @@
+<div class="wrapper">
+  <a id="logo" routerLink="/dashboard">BackOffice</a>
+  <nav>
+    <a routerLink="/orders">Pedidos</a>
+    <a routerLink="/inventory">Inventario</a>
+    <a routerLink="/accounting">Contabilidad</a>
+  </nav>
+  <span class="separator"></span>
+  <ako-user-selector
+    [users]="users"
+    [currentUser]="currentUser$ | async"
+    (userChanged)="loginAsUser($event)"
+  ></ako-user-selector>
+  <button (click)="logout()">
+    <img src="/assets/icons/logout.svg" alt="" />
+    Salir
+  </button>
+</div>

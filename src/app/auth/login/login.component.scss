@@ -1,0 +1,28 @@
+:host {
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  place-content: center;
+}
+
+div {
+  background-color: #fff;
+  min-width: 400px;
+  border-radius: 8px;
+  padding: var(--double-separation);
+}
+
+h1 {
+  margin-bottom: var(--base-separation);
+  color: #5005c0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.error-msg {
+  font-size: 0.8em;
+  color: #b50606;
+}

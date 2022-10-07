@@ -7,6 +7,7 @@
   --half-separation: calc(var(--base-separation) / 2);
   --double-separation: calc(var(--base-separation) * 2);
   --primary-color: #5e00ea;
+  --primary-color-high: #7d29fa;
 }
 
 * {
@@ -14,6 +15,10 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+html {
+  font-size: 1.25rem;
 }
 
 body {
@@ -24,4 +29,53 @@ body {
   grid-template: 1fr / 1fr;
   width: 100vw;
   place-items: start center;
+}
+
+label {
+  font-weight: 500;
+}
+
+input,
+textarea {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 8px 16px;
+  font-size: 1rem;
+  margin-bottom: 16px;
+
+  &:focus {
+    outline-color: var(--primary-color);
+  }
+}
+
+.ng-touched.ng-invalid:is(input, textarea),
+.ng-dirty.ng-invalid:is(input, textarea) {
+  outline: 2px solid #bd0c0c;
+}
+
+.ng-dirty.ng-pending:is(input, textarea) {
+  outline: 2px solid #838a2a;
+}
+
+button[type="submit"] {
+  padding: 12px 16px;
+  background-color: #5e00ea;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 32px;
+
+  &:hover {
+    background-color: var(--primary-color-high);
+    outline: none;
+  }
+
+  &:disabled {
+    background-color: #707070;
+    color: #fff;
+    cursor: not-allowed;
+  }
 }

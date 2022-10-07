@@ -1,0 +1,52 @@
+:host {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  background-color: var(--primary-color);
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  max-width: 1400px;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+a,
+button {
+  display: inline-flex;
+  color: #fff;
+  text-decoration: none;
+  padding: 0 var(--base-separation);
+  line-height: 3.75rem;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: var(--primary-color-high);
+  }
+}
+
+#logo {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-right: calc(var(--double-separation) * 2);
+}
+
+button {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+
+  img {
+    width: 1.15rem;
+    height: auto;
+    margin-right: var(--half-separation);
+  }
+}
+
+.separator {
+  margin: 0 auto;
+}

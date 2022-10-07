@@ -1,0 +1,20 @@
+<div>
+  <h1>BackOffice</h1>
+  <form [formGroup]="form" (ngSubmit)="login()">
+    <label for="username"> Username </label>
+    <input
+      type="text"
+      name="username"
+      formControlName="username"
+      autocomplete="off"
+    />
+    <label for="password">Password </label>
+    <input type="password" name="password" formControlName="password" />
+    <p *ngIf="form.hasError('invalidCredentials')" class="error-msg">
+      Las credenciales son incorrectas
+    </p>
+    <button type="submit" [disabled]="form.invalid || processingRequest">
+      Iniciar Sesión
+    </button>
+  </form>
+</div>

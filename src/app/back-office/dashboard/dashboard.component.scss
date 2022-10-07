@@ -1,0 +1,31 @@
+:host {
+  display: grid;
+  grid-template:
+    "graph1 graph1 list" 3fr
+    "graph2 graph3 list" 1.5fr
+    / 1.5fr 1.5fr 1fr;
+  height: 700px;
+  width: 100%;
+  padding: 0 var(--base-separation);
+  gap: var(--base-separation);
+
+  & > * {
+    border-radius: 8px;
+    background-color: #cdc4ed;
+  }
+}
+
+div {
+  &:nth-child(1) {
+    grid-area: graph1;
+  }
+  &:nth-child(2) {
+    grid-area: graph2;
+  }
+  &:nth-child(3) {
+    grid-area: graph3;
+  }
+  &:nth-child(4) {
+    grid-area: list;
+  }
+}

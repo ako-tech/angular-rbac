@@ -1,0 +1,25 @@
+<h1>Inventario</h1>
+
+<ng-container *ngIf="items$ | async as items; else loading">
+  <table>
+    <thead>
+      <tr>
+        <th>SKU</th>
+        <th>Producto</th>
+        <th>Stock</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of items">
+        <td>{{ item.sku }}</td>
+        <td>
+          <img src="/assets/inventory/{{ item.imageSrc }}" aria-hidden="true" />
+          {{ item.productName }}
+        </td>
+        <td>{{ item.stock }}</td>
+      </tr>
+    </tbody>
+  </table>
+</ng-container>
+
+<ng-template #loading>Obteniendo Productos...</ng-template>

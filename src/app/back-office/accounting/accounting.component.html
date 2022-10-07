@@ -1,0 +1,43 @@
+<h1>Contabilidad</h1>
+<section>
+  <div>
+    <p>Nº de Movimientos</p>
+    <p>90</p>
+  </div>
+  <div>
+    <p>Gastos</p>
+    <p>€7,762.65</p>
+  </div>
+  <div>
+    <p>Ingresos</p>
+    <p>€11,247.23</p>
+  </div>
+</section>
+
+<h2>Últimas Transacciones</h2>
+<ng-container *ngIf="transactions$ | async as transactions; else loading">
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Date</th>
+        <th>Origen / Destinatario</th>
+        <th>Concepto</th>
+        <th>Cantidad</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let transaction of transactions">
+        <td>{{ transaction.id }}</td>
+        <td>{{ transaction.date | date: "dd-MMM-y" }}</td>
+        <td>{{ transaction.fromTo }}</td>
+        <td>{{ transaction.description }}</td>
+        <td [class.negative]="transaction.amount < 0">
+          {{ transaction.amount | currency: "€" }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</ng-container>
+
+<ng-template #loading>Obteniendo Últimas Transacciones...</ng-template>
