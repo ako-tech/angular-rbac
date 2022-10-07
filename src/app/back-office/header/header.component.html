@@ -1,9 +1,13 @@
 <div class="wrapper">
   <a id="logo" routerLink="/dashboard">BackOffice</a>
   <nav>
-    <a routerLink="/orders">Pedidos</a>
-    <a routerLink="/inventory">Inventario</a>
-    <a routerLink="/accounting">Contabilidad</a>
+    <a *akoShowForRoles="['Orders', 'Manager']" routerLink="/orders">Pedidos</a>
+    <a *akoShowForRoles="['Inventory', 'Manager']" routerLink="/inventory"
+      >Inventario</a
+    >
+    <a *akoShowForRoles="['Accounting', 'Manager']" routerLink="/accounting"
+      >Contabilidad</a
+    >
   </nav>
   <span class="separator"></span>
   <ako-user-selector

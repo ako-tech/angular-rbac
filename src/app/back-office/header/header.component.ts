@@ -1,4 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { map, Observable } from 'rxjs';
+import { Role } from 'src/app/auth/model';
 import { AuthService } from '../../auth/auth.service';
 import { User } from '../../auth/model/user.interface';
 
