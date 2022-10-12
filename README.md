@@ -1,27 +1,20 @@
-# Project
+# RBAC en Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.3.
+Aplicación para un BackOffice ficticio de una tienda de ropa, que sirve como apoyo del [video](https://youtu.be/d-QRbhqVzgI) en el que explicamos cómo podemos aplicar técnicas del Control de Acceso Basado en Roles (RBAC) en Angular.
 
-## Development server
+Se tratan dos temas principales:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Las Guardas del Router. Para controlar el acceso a las diferentes partes de la aplicación.
+- Directivas Estructurales. Para mostrar y ocultar elemento en función del rol del usuario.
 
-## Code scaffolding
+## Observaciones
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+El único objetivo de este proyecto es mostrar la funcionalidad de los elementos citados en el video. El código incluido no debe interpretarse como apto para producción, ya que partes han sido simplificadas para una mayor claridad.
 
-## Build
+## Comandos
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+El proyecto está realizado sobre la v14.2 de Angular.
 
-## Running unit tests
+Para levantar un servidor de desarrollo usar el comando `ng serve`. Este estará disponible en `http://localhost:4200/`.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Para compilar la aplicación usar el comando `ng build`. Pudiendo usar la opcion `--prod` para compilar la versión de producción. Los archivos de la aplicación estarán disponibles en la carpeta `dist/`.
