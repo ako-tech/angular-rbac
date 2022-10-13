@@ -11,6 +11,15 @@ Se tratan dos temas principales:
 
 El único objetivo de este proyecto es mostrar la funcionalidad de los elementos citados en el video. El código incluido no debe interpretarse como apto para producción, ya que partes han sido simplificadas para una mayor claridad.
 
+La aplicación incluye 4 usuarios en un servicio `FakeBackend` con lo siguientes roles:
+
+- Bob (Orders)
+- Alice (Inventory)
+- John (Accounting)
+- Sarah (Manager)
+
+**La contraseña para todos ellos es 1234.**
+
 ## Comandos
 
 El proyecto está realizado sobre la v14.2 de Angular.
